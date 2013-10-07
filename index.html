@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Meteor Shiny</title>
+
+		<meta name="description" content="Some demos I made using Meteor">
+		<meta name="author" content="@_alanshaw">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/meteor.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Shiny</h1>
+          <p>Some things made with <a href="http://meteor.com/"><strong>Meteor</strong></a>, demonstrating database everywhere, data on the wire, pub/sub, latency compensation and realtime reactivity.</p>
+					<p></p>
+					<p>
+						<small><a href="http://github.com/alanshaw">Alan Shaw</a> / <a href="http://twitter.com/_alanshaw">@_alanshaw</a></small>
+					</p>
+				</section>
+        
+        <section>
+          <p><img src="img/i-have-no-idea.jpg"></p>
+        </section>
+        
+        <section>
+          <section>
+            <h1>Meteor, what is?</h1>
+          </section>
+          <section>
+            <h2>A full stack web framework</h2>
+            <h3 class="fragment">Manages client <strong>and</strong> server side.</h3>
+            <ul>
+              <li class="fragment">Things like Rails manage server side issues.</li>
+              <li class="fragment">Things like Ember &amp; Angular provide front-end structure.</li>
+              <li class="fragment">Meteor helps out with both.</li>
+            </ul>
+            <p class="fragment"><br/><strong>Node.js</strong> + <strong>MongoDB</strong> + <strong>Socket.io</strong> + <strong>Handlebars</strong>, in a package designed to get you up and running, fast.</p>
+          </section>
+          <section>
+            <h2>Focused on realtime reactivity</h2>
+            <ul>
+              <li class="fragment">Most existing frameworks cater for the traditional model.<!--; server handles a request by sending back html, the client renders it and we all twiddle our thumbs and wait until the user interacts with the page.--></li>
+              <li class="fragment">Meteor doesn't do that.</li>
+              <li class="fragment">Meteor is all about data and diffs, autosync'd and live updated.<!-- It still all ends up as angle brackets and web pages, but Meteor has grown up in a world where client side templating is a thing, and user experience matters.--></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Keeping it simple</h2>
+            <ul>
+              <li class="fragment">
+                Your client gets a collection.
+                <ul>
+                  <li class="fragment">When they add something to it,</li>
+                  <li class="fragment">Meteor syncs the change to the server,</li>
+                  <li class="fragment">...and pushes it out to all the other connected clients.</li>
+                </ul>
+                <br/>
+              </li>
+              <!--li class="fragment">That's it.</li>
+              <li class="fragment">...and that's why it's awesome.</li-->
+              <li class="fragment">The collection API is just a subset of the Mongo API.</li>
+              <li class="fragment">Your client and server code is all JS.</li>
+              <!--li class="fragment">There are just less things to keep in your brain-stack.</li>
+              <li class="fragment">And so the velociraptor of complexity is kept at bay long enough for you to crank out your ideas.</li-->
+            </ul>
+          </section>
+        </section>
+        
+        <section>
+          <h1>So, anyway...</h1>
+        </section>
+        
+        <section>
+          <h1>Demos!!!!111</h1>
+          <!--
+            Pre-occupied with meteor magic
+            Meteor demos are lists - that is dull
+          -->
+        </section>
+        
+        <section>
+          <h1>Blackboard</h1>
+        </section>
+        
+        <section>
+          <h1>Blackboard</h1>
+          <p><a href="http://blackboard.meteor.com/">blackboard.meteor.com</a> <br/> <a href="https://github.com/alanshaw/meteor-foam/">github.com/alanshaw/meteor-blackboard</a></p>
+          <br/>
+          <ul>
+            <li>Full screen shared <code>&lt;canvas&gt;</code></li>
+            <li>Meteor "Deps" autorun</li>
+            <li>Naive wipe everything and redraw</li>
+            <li><a href="http://eightmedia.github.io/hammer.js/">hammer.js</a> touch events</li>
+            <li>~60 lines of JS</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Movements</h1>
+        </section>
+        
+        <section>
+          <h1>Movements</h1>
+          <p><a href="http://movements.meteor.com/">movements.meteor.com</a> <br/> <a href="https://github.com/alanshaw/meteor-browpie/">github.com/alanshaw/meteor-movements</a></p>
+          <br/>
+          <ul>
+            <li>Shared voyage monitoring</li>
+            <li>Meteor "Deps" autorun</li>
+            <li><a href="http://leafletjs.com/">LeafletJS</a> &amp; <a href="http://maps.stamen.com/">Stamen map tiles</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Browpie</h1>
+        </section>
+        
+        <section>
+          <h1>Browpie</h1>
+          <p><a href="http://browpie.meteor.com/">browpie.meteor.com</a> <br/> <a href="https://github.com/alanshaw/meteor-browpie/">github.com/alanshaw/meteor-browpie</a></p>
+          <br/>
+          <ul>
+            <li>Collect the UA strings!</li>
+            <li>Meteor "Deps" auto redraw</li>
+            <li><a href="http://d3js.org/">d3</a> pie charts</li>
+            <li>Rendered in SVG</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Asciify</h1>
+        </section>
+        
+        <section>
+          <h1>Asciify</h1>
+          <p><a href="http://asciify.meteor.com/">asciify.meteor.com</a> <br/> <a href="https://github.com/alanshaw/meteor-asciify/">github.com/alanshaw/meteor-asciify</a></p>
+          <br/>
+          <ul>
+            <li>Batshit crazy implementation</li>
+            <li>NPM integration</li>
+            <li>Handlebars extensions <code>{{#constant}}{{/constant}}</code></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Spotify</h1>
+        </section>
+        
+        <section>
+          <h1>Spotify</h1>
+          <a href="https://github.com/alanshaw/meteor-spotify/">github.com/alanshaw/meteor-spotify</a></p>
+          <br/>
+          <ul>
+            <li>NPM integration <strong>spotify-node-applescript</strong></li>
+            <li>HTML5 <code>&lt;progress&gt;</code> element FTW</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Foam</h1>
+        </section>
+        
+        <section>
+          <h1>Foam</h1>
+          <p><a href="http://foam.meteor.com/">foam.meteor.com</a> <br/> <a href="https://github.com/alanshaw/meteor-foam/">github.com/alanshaw/meteor-foam</a></p>
+          <br/>
+          <ul>
+            <li>Blatant misue of <a href="http://mongodb.org/">MongoDB</a></li>
+            <li>Non flash WebRTC webcam image capture</li>
+            <li>Rendered in SVG</li>
+            <li><a href="http://d3js.org/">d3</a> pack layout</li>
+          </ul>
+        </section>
+        
+        <section>
+					<h1>End</h1>
+					<h3>By <a href="http://github.com/alanshaw">Alan Shaw</a> / <a href="http://twitter.com/_alanshaw">@_alanshaw</a></h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
